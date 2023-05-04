@@ -23,4 +23,4 @@ repo_name: "This-should-be-overridden-by-github-actions-script"
 repo: ucsb-cs156-s23/team02-s23-6pm-4
 owner: ucsb-cs156-s23
 repo_name: team02-s23-6pm-4
-pull_requests: []
+pull_requests: [{"author":{"id":"MDQ6VXNlcjgxMzQxODE5","is_bot":false,"login":"kshitij0407","name":"Kshitij Agarwal"},"headRefName":"KrishA-MusicIssues","number":40,"title":"Krish - added issues for music","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/40"}]
