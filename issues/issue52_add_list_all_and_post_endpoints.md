@@ -1,15 +1,15 @@
-Create `RestaurantController`, add `GET` (index) and `POST` (create)
+Create `MovieController`, add `GET` (index) and `POST` (create)
 
 # Acceptance Criteria:
 
-- [ ] There is a controller file `RestaurantController.java`
+- [ ] There is a controller file `MovieController.java`
       in the expected directory.
-- [ ] In `RestaurantController.java` there is 
+- [ ] In `MovieController.java` there is 
       code for a `GET /api/Movie/all` endpoint 
       that returns a JSON list of all `Movie`s in the database.
       (We sometimes call this an *index* action since it lists all
       items in the database.)
-- [ ] In `RestaurantController.java` there is 
+- [ ] In `MovieController.java` there is 
       code for a `POST /api/Movie/post` endpoint
       that can be used to create a new entry in the table. (This
       is a *create* action.)
@@ -23,9 +23,9 @@ Create `RestaurantController`, add `GET` (index) and `POST` (create)
 - [ ] The `GET` and `POST` endpoints work as expected when the 
       app is deployed to Dokku.
 - [ ] There is full test coverage (Jacoco) for the methods in 
-      `RestaurantController.java`
+      `MovieController.java`
 - [ ] There is full mutation test coverage (Pitest) for the methods in
-      `RestaurantController.java`
+      `MovieController.java`
 
 
 
