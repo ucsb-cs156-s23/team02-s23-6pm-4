@@ -1,4 +1,4 @@
- Add `PUT` (edit) endpoint for a single record in Restaurant table
+ Add `PUT` (edit) endpoint for a single record in Music table
 
 Note that it is a good idea to implement `GET` for a single item
 first; when using `PUT` manually, it's convenient to be able to copy/paste the JSON representation of the data and then edit it in the swagger interface.
@@ -10,8 +10,8 @@ JSON representation of the new item to the backend.
 
 # Acceptance Criteria:
 
-- [ ] In `RestaurantController.java` there is code for an 
-      endpoint `PUT /api/Restaurant?id=123` endpoint 
+- [ ] In `MusicController.java` there is code for an 
+      endpoint `PUT /api/Music?id=123` endpoint 
       that accepts JSON for a new set of values for the database
       fields other than `id`, and updates the values of those fields.
 - [ ] The Swagger-UI endpoints for this endpoint is well documented
@@ -19,8 +19,8 @@ JSON representation of the new item to the backend.
 - [ ] The endpoint works as expected on localhost.
 - [ ] The endpoint works as expected when deployed to Dokku.
 - [ ] There is full test coverage (Jacoco) for the new code in 
-      `RestaurantController.java`
+      `MusicController.java`
 - [ ] There is full mutation test coverage (Pitest) for new code in
-      `RestaurantController.java`
+      `MusicController.java`
 
 
