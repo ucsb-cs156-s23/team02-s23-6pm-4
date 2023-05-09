@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s23/team02-s23-6pm-4
 owner: ucsb-cs156-s23
 repo_name: team02-s23-6pm-4
-pull_requests: [{"author":{"id":"U_kgDOB7ycjA","is_bot":false,"login":"JacobWoodward2000","name":"Jacob W"},"headRefName":"JacobW-ApartmentDatabase","number":104,"title":"jw-Add Apartment Database","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/104"},{"author":{"id":"MDQ6VXNlcjgxMzQxODE5","is_bot":false,"login":"kshitij0407","name":"Kshitij Agarwal"},"headRefName":"KrishA-table","number":103,"title":"added entity and repository- krish","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/103"}]
+pull_requests: [{"author":{"id":"U_kgDOB7ycjA","is_bot":false,"login":"JacobWoodward2000","name":"Jacob W"},"headRefName":"JacobW-ApartmentDatabase","number":104,"title":"jw-Add Apartment Database","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/104"}]
