@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s23/team02-s23-6pm-4
 owner: ucsb-cs156-s23
 repo_name: team02-s23-6pm-4
-pull_requests: [{"author":{"id":"MDQ6VXNlcjcwMTEzOTg3","is_bot":false,"login":"jessica-lieu","name":""},"headRefName":"JessicaL-PaintingsController","number":108,"title":"added PaintingController","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/108"},{"author":{"id":"MDQ6VXNlcjc3NjkzMzkz","is_bot":false,"login":"ykeung","name":"Yuki Keung"},"headRefName":"YukiK-BookController","number":107,"title":"yk - created book controller","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/107"}]
+pull_requests: [{"author":{"id":"MDQ6VXNlcjc3NjkzMzkz","is_bot":false,"login":"ykeung","name":"Yuki Keung"},"headRefName":"YukiK-BookController","number":107,"title":"yk - created book controller","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/107"}]
