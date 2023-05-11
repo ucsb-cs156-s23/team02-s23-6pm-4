@@ -91,5 +91,17 @@ public class BookController extends ApiController {
         return book;
     }
 
+    @ApiOperation(value = "Delete a Book")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @DeleteMapping("")
+    public Object deleteBook(
+            @ApiParam("id") @RequestParam Long id) {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(Book.class, id));
+
+        bookRepository.delete(book);
+        return genericMessage("Book with id %s deleted".formatted(id));
+    }
+
 
 }

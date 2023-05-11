@@ -261,5 +261,52 @@ public class BookControllerTests extends ControllerTestCase {
                 assertEquals("Book with id 67 not found", json.get("message"));
 
         }
-    
+
+        @WithMockUser(roles = { "ADMIN", "USER" })
+        @Test
+        public void admin_can_delete_a_book() throws Exception {
+                // arrange
+
+                Book book1 = Book.builder()
+                                .title("hi")
+                                .author("me")
+                                .description("nothing")
+                                .genre("action")
+                                .build();
+
+                when(bookRepository.findById(eq(15L))).thenReturn(Optional.of(book1));
+
+                // act
+                MvcResult response = mockMvc.perform(
+                                delete("/api/books?id=15")
+                                                .with(csrf()))
+                                .andExpect(status().isOk()).andReturn();
+
+                // assert
+                verify(bookRepository, times(1)).findById(15L);
+                verify(bookRepository, times(1)).delete(any());
+
+                Map<String, Object> json = responseToJson(response);
+                assertEquals("Book with id 15 deleted", json.get("message"));
+        }
+
+        @WithMockUser(roles = { "ADMIN", "USER" })
+        @Test
+        public void admin_tries_to_delete_non_existant_book_and_gets_right_error_message()
+                        throws Exception {
+                // arrange
+
+                when(bookRepository.findById(eq(15L))).thenReturn(Optional.empty());
+
+                // act
+                MvcResult response = mockMvc.perform(
+                                delete("/api/books?id=15")
+                                                .with(csrf()))
+                                .andExpect(status().isNotFound()).andReturn();
+
+                // assert
+                verify(bookRepository, times(1)).findById(15L);
+                Map<String, Object> json = responseToJson(response);
+                assertEquals("Book with id 15 not found", json.get("message"));
+        }
 }
