@@ -7,5 +7,5 @@ import edu.ucsb.cs156.example.entities.Book;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long>{
-    
+
 }
