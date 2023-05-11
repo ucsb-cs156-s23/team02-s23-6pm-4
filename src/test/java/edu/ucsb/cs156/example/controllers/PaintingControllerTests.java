@@ -265,10 +265,10 @@ public class PaintingControllerTests extends ControllerTestCase {
                 Painting monalisaEdited = Painting.builder()
                                 .name("Mona Lisa Painting")
                                 .code("mona-lisa")
-                                .artist("Leonardo da Vinci")
-                                .year(1517)
-                                .medium("Oil")
-                                .period("Renaissance")
+                                .artist("Leonardo di ser Piero da Vinci")
+                                .year(1503)
+                                .medium("Oil on poplar panel")
+                                .period("Italian Renaissance")
                                 .build();
 
                 String requestBody = mapper.writeValueAsString(monalisaEdited);
