@@ -191,6 +191,75 @@ public class BookControllerTests extends ControllerTestCase {
                 assertEquals(expectedJson, responseString);
         }
     
-        
+        @WithMockUser(roles = { "ADMIN", "USER" })
+        @Test
+        public void admin_can_edit_an_existing_book() throws Exception {
+                // arrange
+
+                Book helloOrig = Book.builder()
+                            .title("Hello")
+                            .author("testing lol")
+                            .description("what is up")
+                            .genre("Sad")
+                            .build();
+
+                Book helloEdited = Book.builder()
+                            .title("Bye")
+                            .author("changed")
+                            .description("what is down")
+                            .genre("Happy")
+                            .build();
+
+                String requestBody = mapper.writeValueAsString(helloEdited);
+
+                when(bookRepository.findById(eq(67L))).thenReturn(Optional.of(helloOrig));
+
+                // act
+                MvcResult response = mockMvc.perform(
+                                put("/api/books?id=67")
+                                                .contentType(MediaType.APPLICATION_JSON)
+                                                .characterEncoding("utf-8")
+                                                .content(requestBody)
+                                                .with(csrf()))
+                                .andExpect(status().isOk()).andReturn();
+
+                // assert
+                verify(bookRepository, times(1)).findById(67L);
+                verify(bookRepository, times(1)).save(helloEdited); // should be saved with updated info
+                String responseString = response.getResponse().getContentAsString();
+                assertEquals(requestBody, responseString);
+        }
+
+        @WithMockUser(roles = { "ADMIN", "USER" })
+        @Test
+        public void admin_cannot_edit_book_that_does_not_exist() throws Exception {
+                // arrange
+
+                Book editedBook = Book.builder()
+                                .title("red")
+                                .author("dead")
+                                .description("okman")
+                                .genre("yo")
+                                .build();
+
+                String requestBody = mapper.writeValueAsString(editedBook);
+
+                when(bookRepository.findById(eq(67L))).thenReturn(Optional.empty());
+
+                // act
+                MvcResult response = mockMvc.perform(
+                                put("/api/books?id=67")
+                                                .contentType(MediaType.APPLICATION_JSON)
+                                                .characterEncoding("utf-8")
+                                                .content(requestBody)
+                                                .with(csrf()))
+                                .andExpect(status().isNotFound()).andReturn();
+
+                // assert
+                verify(bookRepository, times(1)).findById(67L);
+                Map<String, Object> json = responseToJson(response);
+                assertEquals("Book with id 67 not found", json.get("message"));
+
+        }
     
 }
