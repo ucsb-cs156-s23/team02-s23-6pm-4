@@ -15,7 +15,7 @@ import lombok.Builder;
 @Entity(name = "movies")
 public class Movie {
   @Id
-  private long id;
+  private String id;
   private String title;
   private String director;
   private long release_year;
