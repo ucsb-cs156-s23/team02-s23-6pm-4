@@ -15,6 +15,7 @@ import lombok.Builder;
 @Entity(name = "apartment")
 public class Apartment {
   @Id
+  private String code;
   private String name;
   private String address;
   private String city;
