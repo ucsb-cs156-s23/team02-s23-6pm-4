@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s23/team02-s23-6pm-4
 owner: ucsb-cs156-s23
 repo_name: team02-s23-6pm-4
-pull_requests: [{"author":{"id":"MDQ6VXNlcjcwMTEzOTg3","is_bot":false,"login":"jessica-lieu","name":""},"headRefName":"JessicaL-PaintingsController","number":111,"title":"Fixed issues on PaintingControllerTests.java","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/111"},{"author":{"id":"U_kgDOB7ycjA","is_bot":false,"login":"JacobWoodward2000","name":"Jacob W"},"headRefName":"JacobW-ApartmentController","number":110,"title":"Add ApartmentController and Tests","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-4/pull/110"}]
+pull_requests: []
