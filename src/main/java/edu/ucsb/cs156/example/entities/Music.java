@@ -20,10 +20,9 @@ import lombok.Builder;
 public class Music {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
-
+  private long id;  
   private String title;
-  private String album;  
+  private String album;
   private String artist;
   private String genre; 
 }

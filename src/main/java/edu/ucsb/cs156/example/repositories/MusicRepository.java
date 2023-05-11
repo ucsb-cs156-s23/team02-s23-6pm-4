@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface MusicRepository extends CrudRepository<Music, String> {
+public interface MusicRepository extends CrudRepository<Music, Long> {
  
 }
