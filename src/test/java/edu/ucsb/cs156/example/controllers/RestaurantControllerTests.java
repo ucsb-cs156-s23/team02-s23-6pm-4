@@ -88,7 +88,7 @@ public class RestaurantControllerTests extends ControllerTestCase {
                 Restaurant restaurants = Restaurant.builder()
                                 .name("Mokkoji")
                                 .code("mokkoji")
-                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot & other Japanese specialties")
+                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot and other Japanese specialties")
                                 .yelp_rating("4 stars")
                                 .build();
 
@@ -135,14 +135,14 @@ public class RestaurantControllerTests extends ControllerTestCase {
                 Restaurant mokkoji = Restaurant.builder()
                                 .name("Mokkoji")
                                 .code("mokkoji")
-                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot & other Japanese specialties")
+                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot and other Japanese specialties")
                                 .yelp_rating("4 stars")
                                 .build();
 
                 Restaurant ohshima = Restaurant.builder()
                                 .name("Ohshima")
                                 .code("ohshima")
-                                .descript("Simple nook known for its fresh seafood & omakase, plus other creative Japanese fare, beer & wine")
+                                .descript("Simple nook known for its fresh seafood and omakase, plus other creative Japanese fare, beer and wine")
                                 .yelp_rating("4.5 stars")
                                 .build();
 
@@ -171,7 +171,7 @@ public class RestaurantControllerTests extends ControllerTestCase {
                 Restaurant tanakaya = Restaurant.builder()
                                 .name("Tanakaya")
                                 .code("tanakaya")
-                                .descript("Japanese soba & udon noodles are the draw at this popular, compact eatery with a casual atmosphere")
+                                .descript("Japanese soba and udon noodles are the draw at this popular, compact eatery with a casual atmosphere")
                                 .yelp_rating("4 stars")
                                 .build();
 
@@ -179,7 +179,7 @@ public class RestaurantControllerTests extends ControllerTestCase {
 
                 // act
                 MvcResult response = mockMvc.perform(
-                                post("/api/restaurant/post?name=Tanakaya&code=tanakaya&descript=Japanese soba & udon noodles are the draw at this popular, compact eatery with a casual atmosphere&yelp_rating=4 stars")
+                                post("/api/restaurant/post?name=Tanakaya&code=tanakaya&descript=Japanese soba and udon noodles are the draw at this popular, compact eatery with a casual atmosphere&yelp_rating=4 stars")
                                                 .with(csrf()))
                                 .andExpect(status().isOk()).andReturn();
 
@@ -246,14 +246,14 @@ public class RestaurantControllerTests extends ControllerTestCase {
                 Restaurant mokkojiOrig = Restaurant.builder()
                                 .name("Mokkoji")
                                 .code("mokkoji")
-                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot & other Japanese specialties")
+                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot and other Japanese specialties")
                                 .yelp_rating("4 stars")
                                 .build();
 
                 Restaurant mokkojiEdited = Restaurant.builder()
                                 .name("Mokkoji Shabu Shabu Bar")
                                 .code("mokkoji")
-                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot & other Japanese specialties")
+                                .descript("Trendy, contemporary eatery focusing on shabu-shabu hot pot and other Japanese specialties")
                                 .yelp_rating("4.5 stars")
                                 .build();
 
@@ -295,7 +295,7 @@ public class RestaurantControllerTests extends ControllerTestCase {
 
                 // act
                 MvcResult response = mockMvc.perform(
-                                put("/api/restaurants?code=orangetheory")
+                                put("/api/restaurant?code=orangetheory")
                                                 .contentType(MediaType.APPLICATION_JSON)
                                                 .characterEncoding("utf-8")
                                                 .content(requestBody)
